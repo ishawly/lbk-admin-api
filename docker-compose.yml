@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  # docker-compose run hyperf
+  hyperf:
+    image: hyperf/hyperf:8.0-alpine-v3.12-swoole
+    volumes:
+      - ./:/data/project
+    ports:
+      - 9501:9501
+      - 9502:9502
+    command: ["php", "/data/project/bin/hyperf.php", "start"]
+    #command: ["/bin/sh"]
