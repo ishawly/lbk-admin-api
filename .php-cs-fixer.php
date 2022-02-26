@@ -1,15 +1,15 @@
 <?php
 
 $header = <<<'EOF'
-This file is part of Hyperf.
+This file is part of Shoplinke.
+Developed By Middle Platform Team Of Starlinke
 
-@link     https://www.hyperf.io
-@document https://hyperf.wiki
-@contact  group@hyperf.io
-@license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+@link     https://www.starlinke.com
+@document https://starlink.feishu.cn/docs/doccn3jY4If0LrKByUrZvlusX0B
+$contact  dev@starlinke.com
 EOF;
 
-return (new PhpCsFixer\Config())
+return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
     ->setRules([
         '@PSR2' => true,
@@ -17,7 +17,7 @@ return (new PhpCsFixer\Config())
         '@DoctrineAnnotation' => true,
         '@PhpCsFixer' => true,
         'header_comment' => [
-            'comment_type' => 'PHPDoc',
+            'commentType' => 'PHPDoc',
             'header' => $header,
             'separate' => 'none',
             'location' => 'after_declare_strict',
@@ -31,9 +31,14 @@ return (new PhpCsFixer\Config())
         'concat_space' => [
             'spacing' => 'one'
         ],
+        'trim_array_spaces' => true,
+        'braces' => [
+            'allow_single_line_closure' => true
+        ],
+        'blank_line_after_opening_tag' => true,
         'blank_line_before_statement' => [
             'statements' => [
-                'declare',
+                'declare', 'return',
             ],
         ],
         'general_phpdoc_annotation_remove' => [
@@ -65,6 +70,9 @@ return (new PhpCsFixer\Config())
         'constant_case' => [
             'case' => 'lower',
         ],
+        'binary_operator_spaces' => [
+            'default' => 'align_single_space_minimal',
+        ],
         'class_attributes_separation' => true,
         'combine_consecutive_unsets' => true,
         'declare_strict_types' => true,
@@ -74,6 +82,9 @@ return (new PhpCsFixer\Config())
         'no_unused_imports' => true,
         'not_operator_with_successor_space' => true,
         'not_operator_with_space' => false,
+        'no_multiline_whitespace_before_semicolons' => true,
+        'no_short_echo_tag' => true,
+        'declare_equal_normalize' => ['space' => 'none'],
         'ordered_class_elements' => true,
         'php_unit_strict' => false,
         'phpdoc_separation' => false,
