@@ -13,7 +13,7 @@
     "description": "A coroutine framework that focuses on hyperspeed and flexible, specifically use for build microservices and middlewares.",
     "license": "Apache-2.0",
     "require": {
-        "php": ">=7.3",
+        "php": ">=8.0",
         "hyperf/cache": "~2.2.0",
         "hyperf/command": "~2.2.0",
         "hyperf/config": "~2.2.0",
@@ -28,7 +28,7 @@
         "hyperf/redis": "~2.2.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.0",
+        "friendsofphp/php-cs-fixer": "^3.3.2",
         "hyperf/devtool": "~2.2.0",
         "hyperf/ide-helper": "~2.2.0",
         "hyperf/testing": "~2.2.0",
@@ -69,7 +69,7 @@
             "rm -rf runtime/container"
         ],
         "test": "co-phpunit --prepend test/bootstrap.php -c phpunit.xml --colors=always",
-        "cs-fix": "php-cs-fixer fix $1",
+        "cs-fix": "php-cs-fixer fix -v $1",
         "analyse": "phpstan analyse --memory-limit 300M -l 0 -c phpstan.neon ./app ./config",
         "start": [
             "Composer\\Config::disableProcessTimeout",
