@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 /**
- * This file is part of Hyperf.
+ * This file is part of Little Bookkeeping Project.
+ * Developed By Shawly
  *
- * @link     https://www.hyperf.io
- * @document https://hyperf.wiki
- * @contact  group@hyperf.io
- * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+ * @link     https://www.shawly.cn
+ * $contact  liber@shawly.cn
  */
 namespace App\Controller;
 
@@ -15,11 +14,11 @@ class IndexController extends AbstractController
 {
     public function index()
     {
-        $user = $this->request->input('user', 'Hyperf');
+        $user   = $this->request->input('user', 'Hyperf');
         $method = $this->request->getMethod();
 
         return [
-            'method' => $method,
+            'method'  => $method,
             'message' => "Hello {$user}.",
         ];
     }
